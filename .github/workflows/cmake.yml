@@ -41,7 +41,7 @@ jobs:
                  ida/idasdk
         mv binexport/ida/idasdk/idasdk*.gpg \
            ida/idasdk/
-        ${{ github.workspace }}/bindiff/.github/scripts/decrypt_secret.sh
+        "${{ github.workspace }}/bindiff/.github/scripts/decrypt_secret.sh"
         7z x -t7z  "${{ runner.workspace }}/build/idasdk91.7z" -o"${{ runner.workspace }}/build/"
       
       
